@@ -1,5 +1,21 @@
 # Temporal public share
 
+## Description of need:
+We have a fully functional mobile money gateway that has been developed to request payment from client after receiving an sms command from that client. The URL to receive the sms expect two parameters in JSON.
+
+```json
+{"from": "+2376xxxxxxxx", "text": "T100"}
+
+```
+The 'from' variable is the phone number that sent the text message and the 'text' is the command that was sent in the message. 
+We have the list of customers and we process requests only from registered customers. We also check that the meter manifacturer api is operational before processing transactions.
+
+## Request: 
+Kindly make it possible to register another URL where incomming sms from the sms gateway app can be forwarded to.
+
+
+## The code
+
 ```python
 
 def can_be_processed(client_phonenumber=None):
